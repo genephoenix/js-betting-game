@@ -32,17 +32,20 @@ $(document).ready(function(){
       // answer = correct -> bet + bankroll
       if (number === randomNumber){
         bankroll += bet;
+        console.log(bankroll);
         var congrats = alert("Your bankroll, " + bankroll + " has increased by " + bet);
       }
 
       // off by 1 , bankroll before = bankroll after
       else if ((number === randomNumber + 1) || (number === randomNumber -1 )){
+        console.log(bankroll);
         var offByOne = alert("No gain, no loss. You were only off by one.");
       }
 
       // else bankroll = bankroll - bet 
       else{
         bankroll -= bet;
+        console.log(bankroll);
         var ohNo = alert("Your bankroll, " + bankroll + " has decreased by " + bet);
       };
     };
